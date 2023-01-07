@@ -3,13 +3,13 @@ interface Items {
 }
 
 //create an interface that takes displayData items of type T
-interface DisplayDataItem<T> {
-    items: Array<T>;
+interface DisplayDataItem<Type> {
+    items: Array<Type>;
 }
 
 //to display student list and courses list
 //here T means the object can be of any type.
-export const DisplayData = <T extends Items> ({ items }: DisplayDataItem<T>) => {
+export const DisplayData = <Type extends Items> ({ items }: DisplayDataItem<Type>) => {
     return (
         <ul>
             {items.map(item => (
